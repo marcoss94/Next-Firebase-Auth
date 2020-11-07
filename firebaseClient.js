@@ -1,5 +1,4 @@
-const firebase = require("firebase");
-
+import firebase from "firebase";
 const FIREBASE_CONFIG = {
   apiKey: "AIzaSyD7Y7SHL0j-nSu1L6GS1xTTTVBs9FXD078",
   authDomain: "next-firebase-auth-8e6d4.firebaseapp.com",
@@ -11,7 +10,7 @@ const FIREBASE_CONFIG = {
 };
 
 export default function firebaseClient() {
-  if (firebase.apps.lenght) {
+  if (!firebase.apps.length) {
     firebase.initializeApp(FIREBASE_CONFIG);
   }
 }

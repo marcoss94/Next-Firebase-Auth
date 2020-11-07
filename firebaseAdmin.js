@@ -8,6 +8,7 @@ export const verifyIdToken = (token) => {
       databaseURL: "https://next-firebase-auth-8e6d4.firebaseio.com",
     });
   }
+
   return admin
     .auth()
     .verifyIdToken(token)
